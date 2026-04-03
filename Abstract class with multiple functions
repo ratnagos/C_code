@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+class Shape {
+public:
+    virtual void area() = 0;
+    virtual void display() = 0;
+};
+
+class Rectangle : public Shape {
+public:
+    void area() {
+        cout << "Area of Rectangle" << endl;
+    }
+
+    void display() {
+        cout << "Rectangle Shape" << endl;
+    }
+};
+
+int main() {
+    Rectangle r;
+    r.area();
+    r.display();
+
+    return 0;
+}
